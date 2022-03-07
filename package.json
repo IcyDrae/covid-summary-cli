@@ -1,0 +1,28 @@
+{
+  "name": "covid-cases-cli",
+  "version": "1.0.0",
+  "description": "A utility that shows the latest covid cases of your city in your terminal.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatrixEternal/covid-cases-cli.git"
+  },
+  "keywords": [
+    "covid",
+    "cli",
+    "js",
+    "nodejs"
+  ],
+  "author": "Reard Gjoni",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/MatrixEternal/covid-cases-cli/issues"
+  },
+  "homepage": "https://github.com/MatrixEternal/covid-cases-cli#readme",
+  "dependencies": {
+    "axios": "^0.26.0"
+  }
+}
