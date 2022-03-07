@@ -4,7 +4,13 @@
   "description": "A utility that shows the latest covid cases of your city in your terminal.",
   "main": "index.js",
   "scripts": {
+    "build": "pkg package.json && chmod +x ./dist/covid-cases-cli-linux",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "src/index.js",
+  "pkg": {
+    "scripts": "bin",
+    "outputPath": "dist/"
   },
   "repository": {
     "type": "git",
