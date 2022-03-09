@@ -3,21 +3,17 @@ let request = function() {
     let axios = require("axios"),
 
     ENDPOINTS = {
-        API: "https://api.covid19api.com",
-        get BY_COUNTRY_LIVE() {
-            return this.API + "/summary";
+        API: "https://disease.sh/v3/covid-19",
+        COUNTRY(name) {
+            return this.API + `/countries/${name}?strict=true`;
         }
     }
 
-    async function fetch() {
+    async function fetch(country) {
         try {
-            let response = await axios.get(ENDPOINTS.BY_COUNTRY_LIVE);
+            let response = await axios.get(ENDPOINTS.COUNTRY(country));
 
-            let summary = response.data.Countries.filter((country) => {
-                return country.CountryCode === "DE";
-            });
-
-            return summary;
+            return response;
         } catch (error) {
             console.log(error)
         }

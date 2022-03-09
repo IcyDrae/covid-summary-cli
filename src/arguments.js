@@ -1,37 +1,32 @@
 
 let arguments = function() {
-    let commandLineArguments = process.argv.slice(2),
-        acceptedArguments = [
-            "-h",
-            "--help",
-            "--country"
-        ];
+    let commandLineArguments = process.argv.slice(2);
 
-    function processArguments() {
-        if (!hasUnknownArguments()) {
-            registerArguments();
-        }
-    }
+    function registerArguments() {
+        handleArgumentWithoutValue();
+        registerArgumentsHelp();
 
-    function hasUnknownArguments() {
-        for (const argument of commandLineArguments) {
-            if (!acceptedArguments.includes(argument)) {
-                console.log(`Unrecognized argument '${argument}'. Expected one of '${acceptedArguments}'`);
+        if (registerArgumentCountry())
+            return commandLineArguments[1];
+
+        function handleArgumentWithoutValue() {
+            if (commandLineArguments[0] === "--country" && commandLineArguments[1] === undefined) {
+                console.log("Argument '--country' expects a value.");
                 process.exit(1);
             }
         }
 
-        return false;
-    }
-
-    function registerArguments() {
-        registerHelpArguments();
-
-        function registerHelpArguments() {
+        function registerArgumentsHelp() {
             if ((commandLineArguments[0] === "--help" || commandLineArguments[0] === "-h") &&
                 commandLineArguments[1] === undefined) {
                 printHelp();
                 process.exit();
+            }
+        }
+
+        function registerArgumentCountry() {
+            if(commandLineArguments[0] === "--country" && commandLineArguments[1] !== undefined) {
+                return true;
             }
         }
     }
@@ -39,7 +34,7 @@ let arguments = function() {
     function printHelp() {
         console.log("\n");
         console.log("covid-cases-cli");
-        console.log("A CLI utility that fetches the summary of a country for the actual day and updates the results every 5 hours, while it keeps running. \n" +
+        console.log("A CLI utility that fetches the summary of a country for the actual day. \n" +
             "Information includes new cases, new deaths, as well as total confirmed cases & total deaths.");
         console.log("\n");
         console.log("Arguments");
@@ -49,7 +44,7 @@ let arguments = function() {
     }
 
     return {
-        processArguments
+        registerArguments
     }
 }
 
