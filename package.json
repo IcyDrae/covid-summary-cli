@@ -1,10 +1,10 @@
 {
-  "name": "covid-cases-cli",
+  "name": "covid-summary-cli",
   "version": "1.0.0",
-  "description": "A utility that shows the latest covid cases of your city in your terminal.",
+  "description": "A CLI utility that fetches the summary of a country or the global summary for the actual day.",
   "main": "index.js",
   "scripts": {
-    "build": "pkg package.json && chmod +x ./dist/covid-cases-cli-linux",
+    "build": "pkg package.json && chmod +x ./dist/covid-summary-cli-linux",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": "src/index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MatrixEternal/covid-cases-cli.git"
+    "url": "git+https://github.com/MatrixEternal/covid-summary-cli.git"
   },
   "keywords": [
     "covid",
@@ -25,9 +25,9 @@
   "author": "Reard Gjoni",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/MatrixEternal/covid-cases-cli/issues"
+    "url": "https://github.com/MatrixEternal/covid-summary-cli/issues"
   },
-  "homepage": "https://github.com/MatrixEternal/covid-cases-cli#readme",
+  "homepage": "https://github.com/MatrixEternal/covid-summary-cli#readme",
   "dependencies": {
     "axios": "^0.26.0"
   }

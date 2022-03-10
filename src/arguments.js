@@ -33,14 +33,14 @@ let arguments = function() {
 
     function printHelp() {
         console.log("\n");
-        console.log("covid-cases-cli");
-        console.log("A CLI utility that fetches the summary of a country for the actual day. \n" +
-            "Information includes new cases, new deaths, as well as total confirmed cases & total deaths.");
+        console.log("covid-summary-cli");
+        console.log("A CLI utility that fetches the summary of a country or the global summary for the actual day. \n" +
+            "Information includes new cases, new deaths, as well as total confirmed cases, total deaths & total active cases.");
         console.log("\n");
         console.log("Arguments");
         console.log("-h --help      displays this message");
         console.log("--country      the lower-case name of the country in English. Example: 'germany' instead of 'Deutschland', 'united-kingdom' instead of 'United Kingdom'. \n" +
-                    "               Usage example: '--country=germany'");
+                    "               Usage example: '--country germany'");
     }
 
     return {
