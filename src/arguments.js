@@ -39,7 +39,7 @@ let arguments = function() {
         console.log("\n");
         console.log("Arguments");
         console.log("-h --help      displays this message");
-        console.log("--country      the lower-case name of the country in English. Example: 'germany' instead of 'Deutschland', 'united-kingdom' instead of 'United Kingdom'. \n" +
+        console.log("--country      the lower-case name of the country in English. Example: 'germany' instead of 'Deutschland', 'uk' instead of 'United Kingdom'. \n" +
                     "               Usage example: '--country germany'");
     }
 
