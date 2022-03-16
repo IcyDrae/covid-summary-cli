@@ -20,10 +20,10 @@ Arguments
 ```
 
 ### no parameter, default behaviour
-<img src="https://github.com/MatrixEternal/covid-summary-cli/blob/main/docs/assets/no_parameter.png" alt="No parameter">
+<img src="https://github.com/MatrixEternal/covid-summary-cli/blob/main/docs/assets/no_parameter.png" alt="No parameter" width="650">
 
 ### ```--country germany```
-<img src="https://github.com/MatrixEternal/covid-summary-cli/blob/main/docs/assets/parameter_country.png" alt="Parameter country">
+<img src="https://github.com/MatrixEternal/covid-summary-cli/blob/main/docs/assets/parameter_country.png" alt="Parameter country" width="650">
 
 ---
 
